@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "4fe8c3d0-7cc3-4e7c-9ee0-a88ddd7eacb4",
+		"name": "Geolocation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8748226"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login / Get Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/Users/Login?username=AndVega&password=123456",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Users",
+								"Login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "AndVega"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Postman\",\r\n  \"password\": \"postman123\",\r\n  \"email\": \"postman@testing.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/Users/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 5,\r\n  \"username\": \"Postman_User\",\r\n  \"password\": \"postman_user@testing.com\",\r\n  \"email\": \"741852postman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/Users?userId=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Get All Locations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/Locations",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 4,\r\n  \"latitude\": -31.4189284813881,\r\n  \"longitude\": -64.19128183326968,\r\n  \"timeStamp\": \"2023-12-27T20:17:48.417Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/Locations",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Location",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"locationId\": 5,\r\n  \"userId\": 4,\r\n  \"latitude\": 123,\r\n  \"longitude\": -1233,\r\n  \"timeStamp\": \"2023-12-27T20:20:07.596Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/Locations",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/Locations?locationId=6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"Locations"
+							],
+							"query": [
+								{
+									"key": "locationId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Places of Interest",
+			"item": [
+				{
+					"name": "Get All Places",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/PlacesOfInterest",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"PlacesOfInterest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Place",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Bowling Space Bar\",\r\n  \"latitude\": -31.4195445686682,\r\n  \"longitude\": -64.18763319160607,\r\n  \"businessType\": \"restaurant, bar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/PlacesOfInterest",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"PlacesOfInterest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Place",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 21,\r\n  \"name\": \"EDITADO Bowling Space Bar\",\r\n  \"latitude\": 213,\r\n  \"longitude\": 123,\r\n  \"businessType\": \"restaurant\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/PlacesOfInterest",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"PlacesOfInterest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Place",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/PlacesOfInterest?placeid=21",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"PlacesOfInterest"
+							],
+							"query": [
+								{
+									"key": "placeid",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POI by User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDM3MTQzMjQsImlzcyI6IkZvZ2F0YSIsImF1ZCI6IkZvZ2F0YSJ9.6mq4rBXsPLHhX-vnkmeaSN-QFkJv6mPRVIebnTO2EP4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7049/api/PlacesOfInterest/PoiByUser?userId=1&radiusInMeters=100&serviceType=coffee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"PlacesOfInterest",
+								"PoiByUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "radiusInMeters",
+									"value": "100"
+								},
+								{
+									"key": "serviceType",
+									"value": "coffee"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
