@@ -37,7 +37,7 @@ app.Seed();
 ```
 Once the project is initialized, you can perform tests using Swagger. Additionally, there is a Postman Collection for testing with Postman (check the root of the cloned project).
 
-STEP 3: Create User.
+## STEP 3: Create User.
 For testing, it's better to use the users already inserted into the database. However, to start testing the endpoints from scratch, create a user using the following endpoint:
 ```sh
 #METHOD POST
@@ -51,7 +51,7 @@ Use the JSON Body:
 }
 ```
 
-## PASO 4: Generar Token.
+## STEP 4: Generate Token.
 
 STEP 4: Generate Token.
 To use other endpoints, generate an Authorization token. To do this, access the following endpoint with the username and password created in STEP 3:
