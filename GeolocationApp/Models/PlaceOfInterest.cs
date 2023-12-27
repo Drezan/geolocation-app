@@ -1,18 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
 namespace GeolocationApp.Models
 {
-    public class Location
+    public class PlaceOfInterest
     {
-        public int LocationId { get; set; }
+        public int Id { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public string Name { get; set; } = null!;
         [Required]
         public double Latitude { get; set; }
         [Required]
         public double Longitude { get; set; }
         [Required]
-        public DateTime TimeStamp { get; set; }
+        public string BusinessType { get; set; } = null!;
     }
 }

@@ -10,6 +10,7 @@ namespace GeolocationApp.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<PlaceOfInterest> Places { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,6 +21,9 @@ namespace GeolocationApp.Data
             //Location
             modelBuilder.Entity<Location>().Property(l => l.LocationId).UseIdentityAlwaysColumn();
             modelBuilder.Entity<Location>().HasIndex(l => l.LocationId);
+
+            //PlaceOfInterest
+            modelBuilder.Entity<PlaceOfInterest>().Property(p => p.Id).UseIdentityAlwaysColumn();
         }
     }
 }

@@ -10,7 +10,6 @@ namespace GeolocationApp.Models
         [Required]
         public string Password { get; set; } = null!;
         [Required]
-        [EmailAddress(ErrorMessage = "Set an correct email.")]
         public string Email { get; set; } = null!;
     }
 }
