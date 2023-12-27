@@ -1,4 +1,4 @@
-# Geolocalion API - Sample
+# Geolocation API - Sample
 ## Technical Test for Fogata Group
 
 This is a simple Geolocation API for Geolocation APP.
